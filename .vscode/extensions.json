@@ -5,6 +5,7 @@
     "esbenp.prettier-vscode", // Prettier formatter
     "dbaeumer.vscode-eslint", // ESLint support
     "DavidAnson.vscode-markdownlint", // Markdown linting
+    "shd101wyy.markdown-preview-enhanced", // Enhanced Markdown preview
 
     // --- Autocomplete & IntelliSense ---
     "christian-kohler.path-intellisense", // Smart import paths (supports @/ alias)
